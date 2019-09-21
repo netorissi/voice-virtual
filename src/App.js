@@ -31,8 +31,6 @@ export default class App extends Component {
         console.log("Artyom succesfully started !");
 
         Mirna.initialize(config).then(() => {
-            
-            console.log(Mirna.getAvailableCommands());
 
             Mirna.sayRandom(["ouvindo", "ativada"], {
                 onStart: () => {
@@ -64,8 +62,6 @@ export default class App extends Component {
         return (
             <div>
                 <h1>Welcome to Mirna Assistant</h1>
-
-                <p>In this very basic assistant, you can say hello and ask for some reports e.g `Generate report of April of this year`</p>
 
                 <input type="button" value="Start Artyom" onClick={this.startAssistant}/>
                 <input type="button" value="Stop Artyom" onClick={this.stopAssistant}/>
