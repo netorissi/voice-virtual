@@ -17,138 +17,127 @@ export default class ArtyomCommandsManager {
         // Carregar todos os comandos para Artyom
         return Artyom.addCommands([
             {
-                indexes: ["amazônia", "floresta", "fogo", "apresenta"],
+                indexes: ["Fale sobre a amazônia", "Me conte"],
                 action: async () => {
                     if (Artyom.isObeying()) {
 
                         await Artyom.dontObey();
 
                         console.log("fala1")
-                        Api.FALA_VOICE1();
+                        Api.VOICE(1);
 
-                        setTimeout( () =>
-                            Artyom.say("Nos últimos 20 anos já foram devastados 436 mil quilômetros quadrados, que equivale a 4 vezes e meia a área de portugal. Especialistas apontam que nesse ritmo a floresta vai entrar em colapso entre 10 e 20 anos, o agro negócio e a especulação fundiária são as principais ameaças, os incêndios também estão destruindo o bioma. É uma situação alarmante já que além de toda biodiversidade, a Amazônia concentra cerca de 20% de toda água doce do planeta e é importante pra regulação climática e pra remoção dos gases do efeito estufa. As futuras gerações correm o risco de não conhecer a Amazônia. Vamos ajudar a Amazônia pois ela pede socorro!"), 
-                        1000);
-
-                        await Artyom.obey();
+                        setTimeout(() => Artyom.obey(), 37000);
                     }
                 }
             },
             {
-                indexes: ["Pula", "Pular", "Saltar"],
+                indexes: ["Quero saber mais", "detalhes"],
                 action: async () => {
 
                     if (Artyom.isObeying()) {
 
                         await Artyom.dontObey();
 
-                        Api.PULA_VOICE();
-                        Artyom.say("uopa");
+                        console.log("fala3")
+                        Api.VOICE(3);
 
-                        await Artyom.obey();
+                        setTimeout(() => Artyom.obey(), 29000);
                     }
                 }
             },
             {
-                indexes: ["você sabe dançar?", "dança", "dançar"],
+                indexes: ["Como acabar com as queimadas?", "como acabar com isso?"],
                 action: async () => {
 
                     if (Artyom.isObeying()) {
 
                         await Artyom.dontObey();
 
-                        Api.DANCA_VOICE();
-                        Artyom.say("Eu só sei fazer isso");
+                        console.log("fala2")
+                        Api.VOICE(2);
 
-                        await Artyom.obey();
+                        setTimeout(() => Artyom.obey(), 40000);
                     }
                 }
             },
-            {
-                indexes: ["da uma volta", "virar", "gira"],
-                action: async () => {
+            // {
+            //     indexes: ["da uma volta", "virar", "gira"],
+            //     action: async () => {
 
-                    if (Artyom.isObeying()) {
+            //         if (Artyom.isObeying()) {
 
-                        await Artyom.dontObey();
+            //             await Artyom.dontObey();
 
-                        Api.ROTATE_VOICE();
+            //             Api.ROTATE_VOICE();
                         
-                        Artyom.say("vou ficar zonza");
-                        await Artyom.obey();
-                    }
-                }
-            },
-            {
-                indexes: ["que dia é hoje?", "hoje é que dia?", "Que dia estamos?", "Qual a data de hoje?"],
-                action: () => {
+            //             Artyom.say("vou ficar zonza");
+            //             await Artyom.obey();
+            //         }
+            //     }
+            // },
+            // {
+            //     indexes: ["que dia é hoje?", "hoje é que dia?", "Que dia estamos?", "Qual a data de hoje?"],
+            //     action: () => {
                     
-                    if (Artyom.isObeying()) {
+            //         if (Artyom.isObeying()) {
 
-                        Artyom.dontObey();
+            //             Artyom.dontObey();
 
-                        let today = new Date();
-                        let dd = String(today.getDate()).padStart(2, '0');
-                        let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-                        let yyyy = today.getFullYear();
+            //             let today = new Date();
+            //             let dd = String(today.getDate()).padStart(2, '0');
+            //             let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            //             let yyyy = today.getFullYear();
 
-                        if (mm === "01")
-                                Artyom.say(`hoje é dia ${dd} de Janeiro de ${yyyy}`);
-                        else if (mm === "02")
-                            Artyom.say(`hoje é dia ${dd} de Fevereiro de ${yyyy}`);
-                        else if (mm === "03")
-                            Artyom.say(`hoje é dia ${dd} de Março de ${yyyy}`);
-                        else if (mm === "04")
-                            Artyom.say(`hoje é dia ${dd} de Abril de ${yyyy}`);
-                        else if (mm === "05")
-                            Artyom.say(`hoje é dia ${dd} de Maio de ${yyyy}`);
-                        else if (mm === "06")
-                            Artyom.say(`hoje é dia ${dd} de Junho de ${yyyy}`);
-                        else if (mm === "07")
-                            Artyom.say(`hoje é dia ${dd} de Julho de ${yyyy}`);
-                        else if (mm === "08")
-                            Artyom.say(`hoje é dia ${dd} de Agosto de ${yyyy}`);
-                        else if (mm === "09")
-                            Artyom.say(`hoje é dia ${dd} de Setembro de ${yyyy}`);
-                        else if (mm === "10")
-                            Artyom.say(`hoje é dia ${dd} de Outubro de ${yyyy}`);
-                        else if (mm === "11")
-                            Artyom.say(`hoje é dia ${dd} de Novembro de ${yyyy}`);
-                        else if (mm === "12")
-                            Artyom.say(`hoje é dia ${dd} de Dezembro de ${yyyy}`);
-                        else
-                            Artyom.say(`hoje é dia ${dd} de ${mm} de ${yyyy}`);
+            //             if (mm === "01")
+            //                     Artyom.say(`hoje é dia ${dd} de Janeiro de ${yyyy}`);
+            //             else if (mm === "02")
+            //                 Artyom.say(`hoje é dia ${dd} de Fevereiro de ${yyyy}`);
+            //             else if (mm === "03")
+            //                 Artyom.say(`hoje é dia ${dd} de Março de ${yyyy}`);
+            //             else if (mm === "04")
+            //                 Artyom.say(`hoje é dia ${dd} de Abril de ${yyyy}`);
+            //             else if (mm === "05")
+            //                 Artyom.say(`hoje é dia ${dd} de Maio de ${yyyy}`);
+            //             else if (mm === "06")
+            //                 Artyom.say(`hoje é dia ${dd} de Junho de ${yyyy}`);
+            //             else if (mm === "07")
+            //                 Artyom.say(`hoje é dia ${dd} de Julho de ${yyyy}`);
+            //             else if (mm === "08")
+            //                 Artyom.say(`hoje é dia ${dd} de Agosto de ${yyyy}`);
+            //             else if (mm === "09")
+            //                 Artyom.say(`hoje é dia ${dd} de Setembro de ${yyyy}`);
+            //             else if (mm === "10")
+            //                 Artyom.say(`hoje é dia ${dd} de Outubro de ${yyyy}`);
+            //             else if (mm === "11")
+            //                 Artyom.say(`hoje é dia ${dd} de Novembro de ${yyyy}`);
+            //             else if (mm === "12")
+            //                 Artyom.say(`hoje é dia ${dd} de Dezembro de ${yyyy}`);
+            //             else
+            //                 Artyom.say(`hoje é dia ${dd} de ${mm} de ${yyyy}`);
 
-                        setTimeout( function() {
-                            Artyom.obey();
-                        }, 1000);
-                    }
-                }
-            },
-            {
-                indexes: ["Repete comigo *", "Repita comigo *"],
-                smart: true,
-                action: (i, voice) => {
+            //             setTimeout( function() {
+            //                 Artyom.obey();
+            //             }, 1000);
+            //         }
+            //     }
+            // },
+            // {
+            //     indexes: ["Repete comigo *", "Repita comigo *"],
+            //     smart: true,
+            //     action: (i, voice) => {
 
-                    if (Artyom.isObeying()) {
+            //         if (Artyom.isObeying()) {
 
-                        Artyom.dontObey();
+            //             Artyom.dontObey();
 
-                        Artyom.say(voice);
+            //             Artyom.say(voice);
 
-                        setTimeout( function() {
-                            Artyom.obey();
-                        }, 1000);
-                    }
-                }
-            },
-            {
-                indexes: ["Parabéns", "Muito bom"],
-                action: () => {
-
-                    if (Artyom.isObeying()) Artyom.say("Obrigada");
-                }
-            },
+            //             setTimeout( function() {
+            //                 Artyom.obey();
+            //             }, 1000);
+            //         }
+            //     }
+            // }
         ]);
     }
 }
