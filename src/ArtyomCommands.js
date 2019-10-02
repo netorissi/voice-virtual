@@ -17,7 +17,7 @@ export default class ArtyomCommandsManager {
         // Carregar todos os comandos para Artyom
         return Artyom.addCommands([
             {
-                indexes: ["Fale sobre a amazônia"],
+                indexes: ["Fale sobre a amazônia", "Fale sobre amazônia"],
                 action: async () => {
                     if (Artyom.isObeying()) {
 
