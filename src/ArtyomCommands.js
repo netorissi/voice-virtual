@@ -17,7 +17,7 @@ export default class ArtyomCommandsManager {
         // Carregar todos os comandos para Artyom
         return Artyom.addCommands([
             {
-                indexes: ["Fale sobre a amazônia", "Me conte"],
+                indexes: ["Fale sobre a amazônia"],
                 action: async () => {
                     if (Artyom.isObeying()) {
 
@@ -26,27 +26,12 @@ export default class ArtyomCommandsManager {
                         console.log("fala1")
                         Api.VOICE(1);
 
-                        setTimeout(() => Artyom.obey(), 37000);
+                        setTimeout(() => Artyom.obey(), 40000);
                     }
                 }
             },
             {
-                indexes: ["Quero saber mais", "detalhes"],
-                action: async () => {
-
-                    if (Artyom.isObeying()) {
-
-                        await Artyom.dontObey();
-
-                        console.log("fala3")
-                        Api.VOICE(3);
-
-                        setTimeout(() => Artyom.obey(), 29000);
-                    }
-                }
-            },
-            {
-                indexes: ["Como acabar com as queimadas?", "como acabar com isso?"],
+                indexes: ["Quero saber mais", "Me conte mais"],
                 action: async () => {
 
                     if (Artyom.isObeying()) {
@@ -56,10 +41,70 @@ export default class ArtyomCommandsManager {
                         console.log("fala2")
                         Api.VOICE(2);
 
-                        setTimeout(() => Artyom.obey(), 40000);
+                        setTimeout(() => Artyom.obey(), 80000);
                     }
                 }
             },
+            // {
+            //     indexes: ["Como acabar com as queimadas?", "como acabar com isso?"],
+            //     action: async () => {
+
+            //         if (Artyom.isObeying()) {
+
+            //             await Artyom.dontObey();
+
+            //             console.log("fala2")
+            //             Api.VOICE(2);
+
+            //             setTimeout(() => Artyom.obey(), 80000);
+            //         }
+            //     }
+            // },
+            // {
+            //     indexes: ["Porque a reciclagem não funciona direito no Brasil?"],
+            //     action: async () => {
+
+            //         if (Artyom.isObeying()) {
+
+            //             await Artyom.dontObey();
+
+            //             console.log("fala4")
+            //             Api.VOICE(4);
+
+            //             setTimeout(() => Artyom.obey(), 90000);
+            //         }
+            //     }
+            // },
+            // {
+            //     indexes: ["Explique sobre a reciclagem"],
+            //     action: async () => {
+
+            //         if (Artyom.isObeying()) {
+
+            //             await Artyom.dontObey();
+
+            //             console.log("fala5")
+            //             Api.VOICE(5);
+
+            //             setTimeout(() => Artyom.obey(), 50000);
+            //         }
+            //     }
+            // },
+            // {
+            //     indexes: ["Benefícios da reciclagem"],
+            //     action: async () => {
+
+            //         if (Artyom.isObeying()) {
+
+            //             await Artyom.dontObey();
+
+            //             console.log("fala6")
+            //             Api.VOICE(6);
+
+            //             setTimeout(() => Artyom.obey(), 65000);
+            //         }
+            //     }
+            // },
             // {
             //     indexes: ["da uma volta", "virar", "gira"],
             //     action: async () => {
