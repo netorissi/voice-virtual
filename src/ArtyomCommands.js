@@ -17,7 +17,7 @@ export default class ArtyomCommandsManager {
         // Carregar todos os comandos para Artyom
         return Artyom.addCommands([
             {
-                indexes: ["Fale sobre a amazônia", "Fale sobre amazônia"],
+                indexes: ["sobre a amazônia", "amazônia"],
                 action: async () => {
                     if (Artyom.isObeying()) {
 
@@ -26,7 +26,7 @@ export default class ArtyomCommandsManager {
                         console.log("fala1")
                         Api.VOICE(1);
 
-                        setTimeout(() => Artyom.obey(), 40000);
+                        setTimeout(() => Artyom.obey(), 20000);
                     }
                 }
             },
@@ -41,7 +41,7 @@ export default class ArtyomCommandsManager {
                         console.log("fala2")
                         Api.VOICE(2);
 
-                        setTimeout(() => Artyom.obey(), 80000);
+                        setTimeout(() => Artyom.obey(), 40000);
                     }
                 }
             },
